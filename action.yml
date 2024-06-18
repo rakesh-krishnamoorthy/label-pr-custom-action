@@ -5,5 +5,3 @@ author: "Rakesh"
 runs:
   using: "node16"
   main: "dist/index.js"
-
-  

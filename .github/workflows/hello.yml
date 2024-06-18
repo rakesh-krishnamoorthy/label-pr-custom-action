@@ -1,0 +1,15 @@
+name: hello
+
+on:
+    workflow_dispatch:
+    push:
+
+jobs:
+    hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: cheskout repository
+              uses: action/checkout/v2
+            - name: Run action
+              uses: ./
+                
