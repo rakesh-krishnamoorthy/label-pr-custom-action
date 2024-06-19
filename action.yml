@@ -1,20 +1,19 @@
-name: "Label new pull request"
-description: "Add a new label when a new PR is opened"
-author: "Rakesh-krishnamoorthy"
+name: "Label new pull requests"
+description: "Add a label when a new PR is opened."
+author: "rakesh krishnamoorthy"
 
 inputs:
   gh-token:
-    description: 'The github token for authentication'
+    description: 'The GitHub token for authentication.'
     required: true
   label:
-    description: 'The label to be applied to the pull request'
+    description: 'The label to be applied to the pull request.'
     required: true
 
-    
 runs:
   using: "node16"
   main: "dist/index.js"
 
 branding:
   icon: 'activity'
-  color: 'blue' 
+  color: 'green'
