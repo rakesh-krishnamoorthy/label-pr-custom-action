@@ -2,9 +2,8 @@ name: hello
 
 on:
     workflow_dispatch:
-    push:
     pull_request:
-        types: [opened , reopened]
+        types: [opened, reopened]
 
 jobs:
     hello:
@@ -13,8 +12,7 @@ jobs:
             - name: checkout repository
               uses: actions/checkout@v3
 
-            - name: Run action
-              uses: ./
+            - uses: ./
               with: 
                 gh-token: ${{ secrets.GH_TOKEN }}
                 label: 'needs-review'
