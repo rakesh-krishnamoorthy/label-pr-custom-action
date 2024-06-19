@@ -16,6 +16,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.run = void 0;
 const core_1 = __nccwpck_require__(2186);
 const github_1 = __nccwpck_require__(5438);
 function run() {
@@ -27,7 +28,7 @@ function run() {
         const pullRequest = github_1.context.payload.pull_request;
         try {
             if (!pullRequest) {
-                throw new Error("This action can only run on pull request");
+                throw new Error("This action can only be run on Pull Requests");
             }
             yield octokit.rest.issues.addLabels({
                 owner: github_1.context.repo.owner,
@@ -41,7 +42,10 @@ function run() {
         }
     });
 }
-run();
+exports.run = run;
+if (!process.env.JEST_WORKER_ID) {
+    run();
+}
 
 
 /***/ }),
