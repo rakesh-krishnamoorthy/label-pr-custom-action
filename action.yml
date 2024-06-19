@@ -1,6 +1,6 @@
 name: "Label new pull request"
 description: "Add a new label when a new PR is opened"
-author: "Rakesh"
+author: "Rakesh-krishnamoorthy"
 
 inputs:
   gh-token:
@@ -17,4 +17,4 @@ runs:
 
 branding:
   icon: 'activity'
-  color: 'green' 
+  color: 'blue' 
